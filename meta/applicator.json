@@ -1,0 +1,108 @@
+{
+    "$schema": "https://cbor-schema.org/draft/2023-02/targets/schema.cbor",
+    "$id": "https://cbor-schema.org/draft/2023-02/targets/meta/applicator.cbor",
+    "$vocabulary": {
+        "https://cbor-schema.org/draft/2023-02/targets/vocab/applicator.cbor": true
+    },
+    "$dynamicAnchor": "meta",
+    "title": "Applicator vocabulary meta-schema",
+    "tag": 51,
+    "type": [
+        "object",
+        "bool"
+    ],
+    "properties": {
+        "prefixItems": {
+            "$ref": "#/$defs/schemaArray",
+            "keyAs": 58
+        },
+        "items": {
+            "$dynamicRef": "#meta",
+            "keyAs": 59
+        },
+        "contains": {
+            "$dynamicRef": "#meta",
+            "keyAs": 60
+        },
+        "additionalProperties": {
+            "$dynamicRef": "#meta",
+            "keyAs": 61
+        },
+        "properties": {
+            "type": "object",
+            "additionalProperties": {
+                "$dynamicRef": "#meta"
+            },
+            "default": {},
+            "keyAs": 62
+        },
+        "patternProperties": {
+            "type": "object",
+            "additionalProperties": {
+                "$dynamicRef": "#meta"
+            },
+            "propertyNames": {
+                "format": "regex"
+            },
+            "default": {},
+            "keyAs": 63
+        },
+        "dependentSchemas": {
+            "type": "object",
+            "additionalProperties": {
+                "$dynamicRef": "#meta"
+            },
+            "default": {},
+            "keyAs": 64
+        },
+        "propertyNames": {
+            "$dynamicRef": "#meta",
+            "keyAs": 65
+        },
+        "keyAs": {
+            "type": [
+                "uint",
+                "int",
+                "text"
+            ],
+            "keyAs": 66
+        },
+        "if": {
+            "$dynamicRef": "#meta",
+            "keyAs": 67
+        },
+        "then": {
+            "$dynamicRef": "#meta",
+            "keyAs": 68
+        },
+        "else": {
+            "$dynamicRef": "#meta",
+            "keyAs": 69
+        },
+        "allOf": {
+            "$ref": "#/$defs/schemaArray",
+            "keyAs": 70
+        },
+        "anyOf": {
+            "$ref": "#/$defs/schemaArray",
+            "keyAs": 71
+        },
+        "oneOf": {
+            "$ref": "#/$defs/schemaArray",
+            "keyAs": 72
+        },
+        "not": {
+            "$dynamicRef": "#meta",
+            "keyAs": 73
+        }
+    },
+    "$defs": {
+        "schemaArray": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "$dynamicRef": "#meta"
+            }
+        }
+    }
+}

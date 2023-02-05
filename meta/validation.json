@@ -1,0 +1,161 @@
+{
+    "$schema": "https://cbor-schema.org/draft/2023-02/targets/schema.cbor",
+    "$id": "https://cbor-schema.org/draft/2023-02/targets/meta/validation.cbor",
+    "$vocabulary": {
+        "https://cbor-schema.org/draft/2023-02/targets/vocab/validation.cbor": true
+    },
+    "$dynamicAnchor": "meta",
+    "title": "Validation vocabulary meta-schema",
+    "tag": 51,
+    "type": [
+        "object",
+        "bool"
+    ],
+    "properties": {
+        "type": {
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/simpleTypes"
+                },
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/$defs/simpleTypes"
+                    },
+                    "minItems": 1,
+                    "uniqueItems": true
+                }
+            ],
+            "keyAs": 24
+        },
+        "const": {
+            "keyAs": 25
+        },
+        "enum": {
+            "type": "array",
+            "items": true,
+            "keyAs": 26
+        },
+        "multipleOf": {
+            "type": "uint",
+            "exclusiveMinimum": 0,
+            "keyAs": 27
+        },
+        "maximum": {
+            "type": [
+                "int",
+                "bigint",
+                "float"
+            ],
+            "keyAs": 28
+        },
+        "exclusiveMaximum": {
+            "type": [
+                "int",
+                "bigint",
+                "float"
+            ],
+            "keyAs": 29
+        },
+        "minimum": {
+            "type": [
+                "int",
+                "bigint",
+                "float"
+            ],
+            "keyAs": 30
+        },
+        "exclusiveMinimum": {
+            "type": [
+                "int",
+                "bigint",
+                "float"
+            ],
+            "keyAs": 31
+        },
+        "maxLength": {
+            "type": "uint",
+            "keyAs": 32
+        },
+        "minLength": {
+            "type": "uint",
+            "default": 0,
+            "keyAs": 33
+        },
+        "pattern": {
+            "type": "text",
+            "format": "regex",
+            "keyAs": 34
+        },
+        "maxItems": {
+            "type": "uint",
+            "keyAs": 35
+        },
+        "minItems": {
+            "type": "uint",
+            "default": 0,
+            "keyAs": 36
+        },
+        "uniqueItems": {
+            "type": "bool",
+            "default": false,
+            "keyAs": 37
+        },
+        "maxContains": {
+            "type": "uint",
+            "keyAs": 38
+        },
+        "minContains": {
+            "type": "uint",
+            "default": 1,
+            "keyAs": 39
+        },
+        "maxProperties": {
+            "type": "uint",
+            "keyAs": 40
+        },
+        "minProperties": {
+            "type": "uint",
+            "default": 0,
+            "keyAs": 41
+        },
+        "required": {
+            "$ref": "#/$defs/stringArray",
+            "keyAs": 42
+        },
+        "dependentRequired": {
+            "type": "object",
+            "additionalProperties": {
+                "$ref": "#/$defs/stringArray"
+            },
+            "keyAs": 43
+        }
+    },
+    "$defs": {
+        "simpleTypes": {
+            "enum": [
+                "null",
+                "bool",
+                "uint",
+                "int",
+                "bigint",
+                "float16",
+                "float32",
+                "float64",
+                "float",
+                "bytes",
+                "text",
+                "array",
+                "object"
+            ]
+        },
+        "stringArray": {
+            "type": "array",
+            "items": {
+                "type": "text"
+            },
+            "uniqueItems": true,
+            "default": []
+        }
+    }
+}

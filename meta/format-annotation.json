@@ -1,0 +1,24 @@
+{
+    "$schema": "https://cbor-schema.org/draft/2023-02/targets/schema.cbor",
+    "$id": "https://cbor-schema.org/draft/2023-02/targets/meta/format-annotation.cbor",
+    "$vocabulary": {
+        "https://cbor-schema.org/draft/2023-02/targets/vocab/format-annotation.cbor": true
+    },
+    "$dynamicAnchor": "meta",
+    "title": "Format vocabulary meta-schema for annotation results",
+    "tag": 51,
+    "type": [
+        "object",
+        "bool"
+    ],
+    "properties": {
+        "tag": {
+            "type": "uint",
+            "keyAs": 80
+        },
+        "format": {
+            "type": "text",
+            "keyAs": 81
+        }
+    }
+}

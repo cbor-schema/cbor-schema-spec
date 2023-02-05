@@ -1,0 +1,24 @@
+{
+    "$schema": "https://cbor-schema.org/draft/2023-02/targets/schema.cbor",
+    "$id": "https://cbor-schema.org/draft/2023-02/targets/meta/unevaluated.cbor",
+    "$vocabulary": {
+        "https://cbor-schema.org/draft/2023-02/targets/vocab/unevaluated.cbor": true
+    },
+    "$dynamicAnchor": "meta",
+    "title": "Unevaluated applicator vocabulary meta-schema",
+    "tag": 51,
+    "type": [
+        "object",
+        "bool"
+    ],
+    "properties": {
+        "unevaluatedItems": {
+            "$dynamicRef": "#meta",
+            "keyAs": 56
+        },
+        "unevaluatedProperties": {
+            "$dynamicRef": "#meta",
+            "keyAs": 57
+        }
+    }
+}

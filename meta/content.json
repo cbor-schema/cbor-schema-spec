@@ -1,0 +1,28 @@
+{
+    "$schema": "https://cbor-schema.org/draft/2023-02/targets/schema.cbor",
+    "$id": "https://cbor-schema.org/draft/2023-02/targets/meta/content.cbor",
+    "$vocabulary": {
+        "https://cbor-schema.org/draft/2023-02/targets/vocab/content.cbor": true
+    },
+    "$dynamicAnchor": "meta",
+    "title": "Content vocabulary meta-schema",
+    "tag": 51,
+    "type": [
+        "object",
+        "bool"
+    ],
+    "properties": {
+        "contentEncoding": {
+            "type": "text",
+            "keyAs": 84
+        },
+        "contentMediaType": {
+            "type": "text",
+            "keyAs": 85
+        },
+        "contentSchema": {
+            "$dynamicRef": "#meta",
+            "keyAs": 86
+        }
+    }
+}

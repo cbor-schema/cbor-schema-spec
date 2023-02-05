@@ -1,0 +1,39 @@
+{
+  "$schema": "https://cbor-schema.org/draft/2023-02/targets/schema.cbor",
+  "$id": "https://cbor-schema.org/draft/2023-02/targets/schema.cbor",
+  "$vocabulary": {
+    "https://cbor-schema.org/draft/2023-02/targets/vocab/core.cbor": true,
+    "https://cbor-schema.org/draft/2023-02/targets/vocab/applicator.cbor": true,
+    "https://cbor-schema.org/draft/2023-02/targets/vocab/unevaluated.cbor": true,
+    "https://cbor-schema.org/draft/2023-02/targets/vocab/validation.cbor": true,
+    "https://cbor-schema.org/draft/2023-02/targets/vocab/meta-data.cbor": true,
+    "https://cbor-schema.org/draft/2023-02/targets/vocab/format-annotation.cbor": true,
+    "https://cbor-schema.org/draft/2023-02/targets/vocab/content.cbor": true
+  },
+  "$dynamicAnchor": "meta",
+  "title": "Core and Validation specifications meta-schema",
+  "tag": 51,
+  "allOf": [
+    {
+      "$ref": "meta/core"
+    },
+    {
+      "$ref": "meta/applicator"
+    },
+    {
+      "$ref": "meta/unevaluated"
+    },
+    {
+      "$ref": "meta/validation"
+    },
+    {
+      "$ref": "meta/meta-data"
+    },
+    {
+      "$ref": "meta/format-annotation"
+    },
+    {
+      "$ref": "meta/content"
+    }
+  ]
+}
