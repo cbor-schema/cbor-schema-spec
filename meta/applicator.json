@@ -1,40 +1,39 @@
 {
-    "$schema": "https://cbor-schema.org/draft/2023-02/targets/schema.cbor",
-    "$id": "https://cbor-schema.org/draft/2023-02/targets/meta/applicator.cbor",
+    "$schema": "https://cbor-schema.org/draft/next/schema.cbor",
+    "$id": "https://cbor-schema.org/draft/next/meta/applicator.cbor",
     "$vocabulary": {
-        "https://cbor-schema.org/draft/2023-02/targets/vocab/applicator.cbor": true
+        "https://cbor-schema.org/draft/next/vocab/applicator.cbor": true
     },
     "$dynamicAnchor": "meta",
     "title": "Applicator vocabulary meta-schema",
     "tag": 51,
-    "type": [
-        "object",
-        "bool"
-    ],
+    "type": "object",
     "properties": {
         "prefixItems": {
-            "$ref": "#/$defs/schemaArray",
-            "keyAs": 58
+            "$ref": "#/$defs/schemaArray"
         },
         "items": {
-            "$dynamicRef": "#meta",
-            "keyAs": 59
+            "$dynamicRef": "#meta"
+        },
+        "maxContains": {
+            "type": "uint"
+        },
+        "minContains": {
+            "type": "uint",
+            "default": 1
         },
         "contains": {
-            "$dynamicRef": "#meta",
-            "keyAs": 60
+            "$dynamicRef": "#meta"
         },
         "additionalProperties": {
-            "$dynamicRef": "#meta",
-            "keyAs": 61
+            "$dynamicRef": "#meta"
         },
         "properties": {
             "type": "object",
             "additionalProperties": {
                 "$dynamicRef": "#meta"
             },
-            "default": {},
-            "keyAs": 62
+            "default": {}
         },
         "patternProperties": {
             "type": "object",
@@ -44,56 +43,55 @@
             "propertyNames": {
                 "format": "regex"
             },
-            "default": {},
-            "keyAs": 63
+            "default": {}
         },
         "dependentSchemas": {
             "type": "object",
             "additionalProperties": {
                 "$dynamicRef": "#meta"
             },
-            "default": {},
-            "keyAs": 64
+            "default": {}
+        },
+        "propertyDependencies": {
+            "type": "object",
+            "additionalProperties": {
+                "type": "object",
+                "additionalProperties": {
+                    "$dynamicRef": "#meta"
+                },
+                "default": {}
+            },
+            "default": {}
         },
         "propertyNames": {
-            "$dynamicRef": "#meta",
-            "keyAs": 65
+            "$dynamicRef": "#meta"
         },
-        "keyAs": {
+        "propertyRename": {
             "type": [
-                "uint",
                 "int",
                 "text"
-            ],
-            "keyAs": 66
+            ]
         },
         "if": {
-            "$dynamicRef": "#meta",
-            "keyAs": 67
+            "$dynamicRef": "#meta"
         },
         "then": {
-            "$dynamicRef": "#meta",
-            "keyAs": 68
+            "$dynamicRef": "#meta"
         },
         "else": {
-            "$dynamicRef": "#meta",
-            "keyAs": 69
+            "$dynamicRef": "#meta"
         },
         "allOf": {
-            "$ref": "#/$defs/schemaArray",
-            "keyAs": 70
+            "$ref": "#/$defs/schemaArray"
         },
         "anyOf": {
-            "$ref": "#/$defs/schemaArray",
-            "keyAs": 71
+            "$ref": "#/$defs/schemaArray"
         },
         "oneOf": {
-            "$ref": "#/$defs/schemaArray",
-            "keyAs": 72
+            "$ref": "#/$defs/schemaArray"
         },
         "not": {
-            "$dynamicRef": "#meta",
-            "keyAs": 73
+            "$dynamicRef": "#meta"
         }
     },
     "$defs": {

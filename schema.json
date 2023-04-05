@@ -1,14 +1,14 @@
 {
-  "$schema": "https://cbor-schema.org/draft/2023-02/targets/schema.cbor",
-  "$id": "https://cbor-schema.org/draft/2023-02/targets/schema.cbor",
+  "$schema": "https://cbor-schema.org/draft/next/schema.cbor",
+  "$id": "https://cbor-schema.org/draft/next/schema.cbor",
   "$vocabulary": {
-    "https://cbor-schema.org/draft/2023-02/targets/vocab/core.cbor": true,
-    "https://cbor-schema.org/draft/2023-02/targets/vocab/applicator.cbor": true,
-    "https://cbor-schema.org/draft/2023-02/targets/vocab/unevaluated.cbor": true,
-    "https://cbor-schema.org/draft/2023-02/targets/vocab/validation.cbor": true,
-    "https://cbor-schema.org/draft/2023-02/targets/vocab/meta-data.cbor": true,
-    "https://cbor-schema.org/draft/2023-02/targets/vocab/format-annotation.cbor": true,
-    "https://cbor-schema.org/draft/2023-02/targets/vocab/content.cbor": true
+    "https://cbor-schema.org/draft/next/vocab/core.cbor": true,
+    "https://cbor-schema.org/draft/next/vocab/applicator.cbor": true,
+    "https://cbor-schema.org/draft/next/vocab/unevaluated.cbor": true,
+    "https://cbor-schema.org/draft/next/vocab/validation.cbor": true,
+    "https://cbor-schema.org/draft/next/vocab/meta-data.cbor": true,
+    "https://cbor-schema.org/draft/next/vocab/format-annotation.cbor": true,
+    "https://cbor-schema.org/draft/next/vocab/content.cbor": true
   },
   "$dynamicAnchor": "meta",
   "title": "Core and Validation specifications meta-schema",

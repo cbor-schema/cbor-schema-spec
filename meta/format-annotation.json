@@ -1,24 +1,16 @@
 {
-    "$schema": "https://cbor-schema.org/draft/2023-02/targets/schema.cbor",
-    "$id": "https://cbor-schema.org/draft/2023-02/targets/meta/format-annotation.cbor",
+    "$schema": "https://cbor-schema.org/draft/next/schema.cbor",
+    "$id": "https://cbor-schema.org/draft/next/meta/format-annotation.cbor",
     "$vocabulary": {
-        "https://cbor-schema.org/draft/2023-02/targets/vocab/format-annotation.cbor": true
+        "https://cbor-schema.org/draft/next/vocab/format-annotation.cbor": true
     },
     "$dynamicAnchor": "meta",
     "title": "Format vocabulary meta-schema for annotation results",
     "tag": 51,
-    "type": [
-        "object",
-        "bool"
-    ],
+    "type": "object",
     "properties": {
-        "tag": {
-            "type": "uint",
-            "keyAs": 80
-        },
         "format": {
-            "type": "text",
-            "keyAs": 81
+            "type": "text"
         }
     }
 }

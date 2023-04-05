@@ -1,47 +1,36 @@
 {
-    "$schema": "https://cbor-schema.org/draft/2023-02/targets/schema.cbor",
-    "$id": "https://cbor-schema.org/draft/2023-02/targets/meta/meta-data.cbor",
+    "$schema": "https://cbor-schema.org/draft/next/schema.cbor",
+    "$id": "https://cbor-schema.org/draft/next/meta/meta-data.cbor",
     "$vocabulary": {
-        "https://cbor-schema.org/draft/2023-02/targets/vocab/meta-data.cbor": true
+        "https://cbor-schema.org/draft/next/vocab/meta-data.cbor": true
     },
     "$dynamicAnchor": "meta",
     "title": "Meta-data vocabulary meta-schema",
     "tag": 51,
-    "type": [
-        "object",
-        "bool"
-    ],
+    "type": "object",
     "properties": {
         "title": {
-            "type": "text",
-            "keyAs": 14
+            "type": "text"
         },
         "description": {
-            "type": "text",
-            "keyAs": 15
+            "type": "text"
         },
-        "default": {
-            "keyAs": 16
-        },
+        "default": true,
         "deprecated": {
             "type": "bool",
-            "default": false,
-            "keyAs": 17
+            "default": false
         },
         "readOnly": {
             "type": "bool",
-            "default": false,
-            "keyAs": 18
+            "default": false
         },
         "writeOnly": {
             "type": "bool",
-            "default": false,
-            "keyAs": 19
+            "default": false
         },
         "examples": {
             "type": "array",
-            "items": true,
-            "keyAs": 20
+            "items": true
         }
     }
 }

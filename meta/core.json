@@ -1,63 +1,51 @@
 {
-    "$schema": "https://cbor-schema.org/draft/2023-02/targets/schema.cbor",
-    "$id": "https://cbor-schema.org/draft/2023-02/targets/meta/core.cbor",
+    "$schema": "https://cbor-schema.org/draft/next/schema.cbor",
+    "$id": "https://cbor-schema.org/draft/next/meta/core.cbor",
     "$vocabulary": {
-        "https://cbor-schema.org/draft/2023-02/targets/vocab/core.cbor": true
+        "https://cbor-schema.org/draft/next/vocab/core.cbor": true
     },
     "$dynamicAnchor": "meta",
     "title": "Core vocabulary meta-schema",
     "tag": 51,
-    "type": [
-        "object",
-        "bool"
-    ],
+    "type": "object",
     "properties": {
         "$id": {
-            "$ref": "#/$defs/uriReferenceString",
-            "$comment": "Non-empty fragments not allowed.",
-            "pattern": "^[^#]*#?$",
-            "keyAs": 1
+            "$ref": "#/$defs/iriReferenceString",
+            "$comment": "Fragments not allowed.",
+            "pattern": "^[^#]*$"
         },
         "$schema": {
-            "$ref": "#/$defs/uriString",
-            "keyAs": 2
+            "$ref": "#/$defs/iriString"
         },
         "$ref": {
-            "$ref": "#/$defs/uriReferenceString",
-            "keyAs": 3
+            "$ref": "#/$defs/iriReferenceString"
         },
         "$anchor": {
-            "$ref": "#/$defs/anchorString",
-            "keyAs": 4
+            "$ref": "#/$defs/anchorString"
         },
         "$dynamicRef": {
-            "$ref": "#/$defs/uriReferenceString",
-            "keyAs": 5
+            "$ref": "#/$defs/iriReferenceString"
         },
         "$dynamicAnchor": {
-            "$ref": "#/$defs/anchorString",
-            "keyAs": 6
+            "$ref": "#/$defs/anchorString"
         },
         "$vocabulary": {
             "type": "object",
             "propertyNames": {
-                "$ref": "#/$defs/uriString"
+                "$ref": "#/$defs/iriString"
             },
             "additionalProperties": {
                 "type": "bool"
-            },
-            "keyAs": 7
+            }
         },
         "$comment": {
-            "type": "text",
-            "keyAs": 8
+            "type": "text"
         },
         "$defs": {
             "type": "object",
             "additionalProperties": {
                 "$dynamicRef": "#meta"
-            },
-            "keyAs": 9
+            }
         }
     },
     "$defs": {
@@ -65,13 +53,13 @@
             "type": "text",
             "pattern": "^[A-Za-z_][-A-Za-z0-9._]*$"
         },
-        "uriString": {
+        "iriString": {
             "type": "text",
-            "format": "uri"
+            "format": "iri"
         },
-        "uriReferenceString": {
+        "iriReferenceString": {
             "type": "text",
-            "format": "uri-reference"
+            "format": "iri-reference"
         }
     }
 }
