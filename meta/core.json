@@ -7,7 +7,10 @@
     "$dynamicAnchor": "meta",
     "title": "Core vocabulary meta-schema",
     "tag": 51,
-    "type": "object",
+    "type": [
+        "object",
+        "boolean"
+    ],
     "properties": {
         "$id": {
             "$ref": "#/$defs/iriReferenceString",

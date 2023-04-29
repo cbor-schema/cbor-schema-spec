@@ -7,7 +7,10 @@
     "$dynamicAnchor": "meta",
     "title": "Validation vocabulary meta-schema",
     "tag": 51,
-    "type": "object",
+    "type": [
+        "object",
+        "boolean"
+    ],
     "properties": {
         "tag": {
             "type": "uint"
@@ -110,15 +113,14 @@
                 "bool",
                 "uint",
                 "int",
-                "bigint",
                 "float16",
                 "float32",
                 "float64",
-                "float",
                 "bytes",
                 "text",
                 "array",
-                "object"
+                "map",
+                "tag"
             ]
         },
         "stringArray": {

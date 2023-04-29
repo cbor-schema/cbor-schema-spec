@@ -7,7 +7,10 @@
     "$dynamicAnchor": "meta",
     "title": "Meta-data vocabulary meta-schema",
     "tag": 51,
-    "type": "object",
+    "type": [
+        "object",
+        "boolean"
+    ],
     "properties": {
         "title": {
             "type": "text"

@@ -7,7 +7,10 @@
     "$dynamicAnchor": "meta",
     "title": "Applicator vocabulary meta-schema",
     "tag": 51,
-    "type": "object",
+    "type": [
+        "object",
+        "boolean"
+    ],
     "properties": {
         "prefixItems": {
             "$ref": "#/$defs/schemaArray"

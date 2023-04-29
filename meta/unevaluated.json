@@ -7,7 +7,10 @@
     "$dynamicAnchor": "meta",
     "title": "Unevaluated applicator vocabulary meta-schema",
     "tag": 51,
-    "type": "object",
+    "type": [
+        "object",
+        "boolean"
+    ],
     "properties": {
         "unevaluatedItems": {
             "$dynamicRef": "#meta"
